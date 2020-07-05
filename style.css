@@ -1,0 +1,88 @@
+﻿body {
+    background-image: url("tron-sfondo.png");
+    font-family: 'Bungee', cursive!important;
+}
+canvas {
+    border: 1px solid #777;
+    outline: 1px solid #333;
+    outline-offset: 5px;
+    width: 500px;
+    height: 400px;
+    margin-left:35%;
+    background-color:black;
+}
+.btn-joystick {
+    background-color: darkblue;
+    color: lightblue;
+    border-radius: 10px 10px 10px 10px;
+    border: 3px solid lightblue;
+}
+
+.title1{
+	   animation: color-animation 3s infinite linear alternate;
+}
+#header {
+    position: fixed;
+}
+
+section {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.slide_holder {
+    width: 200%;
+}
+
+.slide {
+    width: 50%;
+   
+    text-align: center;
+  
+}
+
+.letters {
+    padding-top: 150px;
+}
+
+#section_one\/slide_one {
+    color: white;
+    background-color: black;
+}
+.main_links {
+    text-align: center !important;
+    margin-right: 10px !important;
+    padding: 0px 32px !important;
+    background-color: black !important;
+    color: #d0daf5 !important;
+    border: 5px solid #d0daf5 !important;
+    border-radius: 30px 30px 30px 30px !important;
+    font-weight: bold;
+}
+    .main_links:hover {
+        text-align: center !important;
+        margin-right: 10px !important;
+        padding: 0px 32px !important;
+        background-color: #d0daf5 !important;
+        color: #007991 !important;
+        border: 5px solid #007991 !important;
+        border-radius: 30px 30px 30px 30px !important;
+        cursor: pointer !important;
+    }
+
+ @keyframes color-animation {
+    0% {
+       color: white;
+    }
+    50% {
+       color: blue;
+    } 
+    100% {
+       color: deepskyblue;
+    } 
+ }
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}
