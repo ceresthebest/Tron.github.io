@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tron</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">
@@ -11,105 +12,53 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <title>Tron</title>
 </head>
-
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <section id="section_one" style="display:none">
-                    <div class="slide_holder">
-                        <div class="slide" id="section_one/slide_one" style="display:none">
+<div class="wrapper">
+    <p class="title">
+        <img src="img/TRON.png" width="290" height="100" alt="Alternate Text" /><br />
+    </p>
 
-                            <script src="bike.js"></script>
-                            <script src="board.js"></script>
-                            <div style="float: left; border: 7px groove darkblue;position: absolute; border-radius: 10px 10px 10px 10px;">
-                                <div id="blue" style="display:none;">
-                                    Player Blue: &nbsp;
-                                    <div id="highscoresblue"></div>
-                                </div><br />
-                                <div id="orange" style="display:none;">
-                                    Player Orange: &nbsp;
-                                    <div id="highscoresorange"></div>
-
-                                </div>
-                                <div id="com" style="display:none;">
-                                    COM: &nbsp;
-                                    <div id="highscoresorange"></div>
-
-                                </div>
-                            </div>
-                            <div id="joystick" style="float: left; border: 7px groove darkblue;position: absolute; border-radius: 10px 10px 10px 10px; margin-top: 50%;">
-                                <p id="player" style="display:none;font-size:24px;"> Player 1</p>
-
-                                <button id="up" class="btn-joystick" onclick="moveup('R')">▲</button><br />
-                                <button id="left" class="btn-joystick" onclick="moveleft('R')">◄</button>&nbsp;
-                                <button id="right" class="btn-joystick" onclick="moveright('R')">►</button>
-                                <br />
-                                <button id="down" class="btn-joystick" onclick="movedown('R')">▼</button>
-                            </div>
-                            <div id="joystick" style="float: left; margin-left: 350%; border: 7px groove darkblue;position: absolute; border-radius: 10px 10px 10px 10px; margin-top: 50%;">
-                                <p id="player2" style="display:none;padding: 20px 20px;">Player 2 use Arrow Keys</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div id="results" class="col-sm" style="color: white;font-weight: bold;font-style: italic;">
-                <p id="result2" style="display:none;font-size: 52px;margin-top: 50%;color: aliceblue;padding: 24px 48px;position: absolute; margin-left: 50%;"> Player 1 Wins!</p>
-                <p id="result1" style="display:none;font-size: 52px;margin-top: 50%;color: aliceblue;padding: 24px 48px;position: absolute; margin-left: 50%;"> Player 2 Wins!</p>
-            </div>
-            <div class="col-sm">
-                <button id="btn-home" class="main_links" onclick="home()" style="display:none;float: right; margin-bottom:3%;">Home</button>
-            </div>
-            <div class="col-sm">
-                <button id="btn-restart" class="main_links" onclick="restart()" style="display:none;float: right; margin-bottom:3%;">Restart</button>
-            </div>
+    <section id="login">
+        <form>
+            <input type="text" id="username" placeholder="Digita il tuo username" /><br /><br />
+              <button id="login-button" type="input">
+                <span class="highlight"></span>
+                <span class="text">Connettiti</span>
+              </button>
+        </form>
+    </section>
+    <section id="content">
+        <div>
+            <form class="ready">
+                <button id="play-button">
+                    <span class="highlight"></span>
+                    <span class="text">Gioca</span>
+                </button>
+            </form>
+            <span id="joystick"></span>
+            <canvas id="canvas"></canvas>
+            <p id="ping" class="ping"></p>
         </div>
-    </div>
-
-    <div id="header" style="margin-left: 40%;margin-top:10%;">
-        <img src="TRON.png" width="290" height="100" style ="display:block;"alt="Alternate Text" /><br />
-        <a class="main_links" onclick="startGame('1')">1 Player</a>
-        <a class="main_links" onclick="startGame('2')">2 Players</a>
-
-
-    </div>
-
-   
-
-    <a id="home" class="main_links" onclick="home()" style="display:none">Home</a>
-
+        <div id="actions-div">
+            <div id="chat" class="chat"></div>
+        </div>
+        <span id="controls-for-mobile">
+            <button id="hide-button">
+                <span class="highlight"></span>
+                <span class="text">Mostra/Nascondi Chat</span>
+            </button>
+            <button id="button-for-device">
+                <span class="highlight"></span>
+                <span class="text">Muovi/Accelera</span>
+            </button>
+        </span>
+    </section>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/nipplejs.min.js"></script>
+<script src="js/client.js"></script>
 </body>
 </html>
-
-<script>
-    function home() {
-        var x = document.getElementById("header");
-        var y = document.getElementById("section_one");
-        var z = document.getElementById("section_one/slide_one");
-        var w = document.querySelector("canvas");
-
-        if (x.style.display === "none") {
-            x.style.display = "block";
-            y.style.display = "none";
-            z.style.display = "none";
-            w.style.display = "none";
-            document.getElementById("btn-home").style.display = "none";
-            document.getElementById("result1").style.display = "none";
-            document.getElementById("result2").style.display = "none";
-
-            location.reload(true);
-
-
-        } else {
-            y.style.display = "block";
-            z.style.display = "block";
-            y.style.display = "block";
-            w.style.display = "block";
-            x.style.display = "none";
-        }
-    }
-</script>

@@ -1,0 +1,16 @@
+{
+  "name": "TronGame",
+  "version": "1.0.0",
+  "description": "Tron Game",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^1.7.4"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
